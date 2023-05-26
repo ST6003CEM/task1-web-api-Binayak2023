@@ -11,7 +11,7 @@ exports.createUser = catchAsyncErrors(async(req, res, next) => {
     try {
         const { name, email, password } = req.body;
         console.log(req.body);
-        const user = await User.create({
+        const user = await user.create({
             name,
             email,
             password,
